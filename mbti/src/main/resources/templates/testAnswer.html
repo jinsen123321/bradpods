@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>YourResult</title>
+</head>
+<body>
+<form action="/testAnswer" method="get">
+    <h3>This is your result!</h3><hr/>
+    <p>
+        评估类型：<input type="text" name="type" th:value="${type}"/><hr/>
+        职业建议：<input type="text" name="profession" th:value="${suggest.profession}"/><br/>
+        性格特点：<input type="text" name="character" th:value="${suggest.character}"/><br/>
+        优势分析：<input type="text" name="advantage" th:value="${suggest.advantage}"/><br/>
+        劣势分析：<input type="text" name="defect" th:value="${suggest.defect}"/><br/>
+    </p>
+    <br/>
+</form>
+
+
+</body>
+</html>

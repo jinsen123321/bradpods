@@ -1,0 +1,31 @@
+#server配置
+server:
+  port: 80
+  session-timeout: 30
+  tomcat.max-threads: 0
+  tomcat.uri-encoding: UTF-8
+
+#spring配置
+spring:
+  thymeleaf:
+    prefix: classpath:/templates
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/suggestion
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+
+#mybatis
+mybatis:
+  type-aliases-package: com.pradypods
+  mapper-locations: classpath:mappers/**/*.xml
+

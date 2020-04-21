@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bradypods.position.mapper.PositionMapper">
+	
+	<select id="queryTotal" resultType="int">
+		select count(position_id) from position;
+	</select>
+	
+	<select id="queryByPage" resultType="Position">
+		select * from position limit #{start},#{rows}
+	</select>
+	
+	<select id="queryById" parameterType="string" resultType="Position">
+		select * from position where position_id=#{positiontId};
+	</select>
+	
+</mapper> 
+
+
+
+
+
+
+
+
+
+
+
+

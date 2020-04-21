@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>YourResult</title>
+</head>
+<body>
+    <form action="/testAnswer" method="get">
+        <h3>This is your result!</h3><hr/>
+        <p>
+            评估类型：<input type="text" name="type" th:value="${type}"/>
+            职业建议：<input type="text" name="suggest" th:value="${suggest}"/>
+        </p>
+        <br/>
+    </form>
+
+
+</body>
+</html>
